@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>FemmeHacks</title>
+<title>Budget Up</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -11,6 +11,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url('finance.jpg');
 }
 
 /* Style the header */
@@ -27,7 +28,7 @@ nav {
   float: left;
   width: 15%;
   height: 550px; 
-  background: #ccc;
+  /*background: #ccc;*/
   padding: 20px;
 }
 
@@ -41,7 +42,7 @@ article {
   float: left;
   padding: 20px;
   width: 85%;
-  background-color: #f1f1f1;
+  /*background-color: #f1f1f1;*/
   height: 550px;
 }
 
@@ -64,6 +65,8 @@ button {
 	background-color: rgb(156, 0, 0);
 	border: none;
 	border-radius: 6px;
+  width: 150px;
+  height: 80px;
 	color: white;
 	padding: 15px 32px;
 	text-align: center;
@@ -105,15 +108,15 @@ button:hover {
 </style>
 </head>
 <body>
-
+    <div style="background-image: url('finance.jpg');">
 <header>
-  <h2>Title</h2>
+  <h2>Budget Up</h2>
 </header>
 
 <section>
   <nav>
     <ul><center>
-		<br><br><br>
+		<br><br>
 	  	<button class="button" onclick="location.href='UploadReceipt.html'">Upload Receipt</button><br><br>
 		<button class="buttonclicked" onclick="location.href='Spending.html'">View Spending</button><br><br>
 		<button class="button" onclick="location.href='Budget.html'">Set Budget</button><br><br>
@@ -122,13 +125,15 @@ button:hover {
   </nav>
   
   <article>
-    <h1>Screen that changes</h1>
+    <h1>Spending</h1>
+    <h2>Total spending for month. Choose month. </h2>
+
   </article>
 </section>
 
 <footer>
   <p>Made by Chathumini Abeyratna, Naimisha Rachakonda, Tumaris Yalkun, and Alia Yeszhanova</p>
 </footer>
-
+</div>
 </body>
 </html>
