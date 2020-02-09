@@ -11,7 +11,6 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url('finance.jpg');
 }
 
 /* Style the header */
@@ -28,7 +27,7 @@ nav {
   float: left;
   width: 15%;
   height: 550px; 
-  /*background: #ccc;*/
+  background: #ccc;
   padding: 20px;
 }
 
@@ -42,7 +41,7 @@ article {
   float: left;
   padding: 20px;
   width: 85%;
-  /*background-color: #f1f1f1;*/
+  background-color: #f1f1f1;
   height: 550px;
 }
 
@@ -98,6 +97,51 @@ button:hover {
 	transition-duration: 0.4s;
 }
 
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  background-color: rgb(156, 0, 0);
+  width: 140px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 5px 10px;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
   nav, article {
@@ -108,7 +152,6 @@ button:hover {
 </style>
 </head>
 <body>
-    <div style="background-image: url('finance.jpg');">
 <header>
   <h2>Budget Up</h2>
 </header>
@@ -118,16 +161,45 @@ button:hover {
     <ul><center>
 		<br><br>
 	  	<button class="button" onclick="location.href='UploadReceipt.html'">Upload Receipt</button><br><br>
-		<button class="buttonclicked" onclick="location.href='Spending.html'">View Spending</button><br><br>
-		<button class="button" onclick="location.href='Budget.html'">Set Budget</button><br><br>
-		<button class="button" onclick="location.href='Settings.html'">Settings</button><br><br>
+    <button class="button" onclick="location.href='Budget.html'">View Receipt</button><br><br>
+    <button class="buttonclicked" onclick="location.href='Spending.html'">View Spending</button><br><br>
+		
     </center></ul>
   </nav>
   
   <article>
-    <h1>Spending</h1>
-    <h2>Total spending for month. Choose month. </h2>
+    <h2>View your total spending for the month! </h2>
+    <center>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Choose Month
+          <i class="fa fa-caret-down"></i>
+        </button>
+    <div class="dropdown-content" id="myDropdown">
+        <a href="#">January</a>
+        <a href="#">February</a>
+        <a href="#">March</a>
+      </div>
+      </div>
 
+      <script>
+          /* When the user clicks on the button, 
+          toggle between hiding and showing the dropdown content */
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+          
+          // Close the dropdown if the user clicks outside of it
+          window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+            var myDropdown = document.getElementById("myDropdown");
+              if (myDropdown.classList.contains('show')) {
+                myDropdown.classList.remove('show');
+              }
+            }
+          }
+          </script>
+<br><br><br><br>
+    <img src="./piechart.png" alt="Chart"></center>
   </article>
 </section>
 

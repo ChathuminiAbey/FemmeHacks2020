@@ -97,6 +97,22 @@ button:hover {
 	transition-duration: 0.4s;
 }
 
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
   nav, article {
@@ -117,14 +133,42 @@ button:hover {
     <ul><center>
 		<br><br>
 	  	<button class="button" onclick="location.href='UploadReceipt.html'">Upload Receipt</button><br><br>
-		<button class="button" onclick="location.href='Spending.html'">View Spending</button><br><br>
-		<button class="buttonclicked" onclick="location.href='Budget.html'">Set Budget</button><br><br>
-		<button class="button" onclick="location.href='Settings.html'">Settings</button><br><br>
+    <button class="buttonclicked" onclick="location.href='Budget.html'">View Receipt</button><br><br>
+    <button class="button" onclick="location.href='Spending.html'">View Spending</button><br><br>
+		
     </center></ul>
   </nav>
   
   <article>
-    <h1>Screen that changes</h1>
+    <h2>View your receipt!</h2>
+
+    <table>
+        <tr>
+          <th></th>
+          <th>Description</th>
+          <th>Amount</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Sleeveless Shirt</td>
+          <td>$19.99</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Faded Jeans</td>
+          <td>$39.99</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Long Dress</td>
+          <td>$67.99</td>
+        </tr>
+        <tr>
+          <td><b>Total</b></td>
+          <td>Helen Bennett</td>
+        </tr>
+      </table>
+
   </article>
 </section>
 
