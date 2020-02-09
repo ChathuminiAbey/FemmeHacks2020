@@ -4,7 +4,7 @@ import '../App.scss';
 
 function NavBar() {
   return (
-    <div>
+    <div style={{backgroundColor: 'blue'}}>
     <aside className="menu">
       <p className="menu-label">
       WELCOME
